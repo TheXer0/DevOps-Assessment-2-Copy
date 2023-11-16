@@ -6,10 +6,9 @@
 
 # A simple program to calculate sum of two numbers
 a=int(input("Enter first number:"))
-
+b=int(input("Enter second number:"))
+Sum = a + b
 print("Sum of the two numbers:",Sum)
-
-
 
 # In[ ]:
 

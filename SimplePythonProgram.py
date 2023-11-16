@@ -5,10 +5,11 @@
 
 
 # A simple program to calculate sum of two numbers
-a=int(input("Enter first number:"))
 
-print("Sum of the two numbers:",Sum)
-
+if (Sum%2) == 0:
+    print("The sum is an even number.")
+else:
+    print("The sum is an odd number.")
 
 
 # In[ ]:

@@ -1,22 +1,24 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 # A simple program to calculate sum of two numbers
 
 
-a=int(input("Enter first number:"))
-b=int(input("Enter second number:"))
-Sum = a + b
-print("Sum of the two numbers:",Sum)
-if (Sum%2) == 0:
-    print("The sum is an even number.")
-else:
-    print("The sum is an odd number.")
+def calculate_sum(a, b):
+    return a + b
 
-# In[ ]:
+def check_even_odd(sum):
+    if sum % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+if __name__ == "__main__":
+    try:
+        a = int(input("Enter first number:"))
+        b = int(input("Enter second number:"))
+        Sum = calculate_sum(a, b)
+        print("Sum of the two numbers:", Sum)
+        print("The sum is an", check_even_odd(Sum), "number.")
+    except ValueError:
+        print("Please enter a valid integer.")
 
 
 

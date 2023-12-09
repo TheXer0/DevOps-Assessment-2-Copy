@@ -1,25 +1,16 @@
 import unittest
-
-def calculate_sum(a, b):
-    return a + b
-
-def check_even_odd(sum):
-    if sum % 2 == 0:
-        return "Even"
-    else:
-        return "Odd"
+from SimplePythonProgram import calculate_sum, check_even_odd
 
 class TestSumFunction(unittest.TestCase):
-
     def test_sum_even(self):
         # Test case 1: Testing if the sum of two even numbers is even
         result = calculate_sum(4, 6)
-        self.assertEqual(result % 2, 0)
+        self.assertEqual(check_even_odd(result), "Even")
 
     def test_sum_odd(self):
         # Test case 2: Testing if the sum of an odd and even number is odd
         result = calculate_sum(3, 4)
-        self.assertEqual(result % 2, 1)
+        self.assertEqual(check_even_odd(result), "Odd")
 
     def test_sum_zero(self):
         # Test case 3: Testing if the sum of zero and a number is the number itself
